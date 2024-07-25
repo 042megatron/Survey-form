@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <header>
+        <h1 id="title">
+            My Survey Form
+        </h1>
+        <p id="description">
+            This form is for you to give your feedback
+        </p>
+    </header>
+    <form id="survey-form">
+
+        <fieldset class="form-wrap">
+            <label for="name" id="name-label">
+                Name
+                <input type="text" id="name" placeholder="Enter your name" required value>
+            </label>
+            <br>
+            <label for="email" id="email-label">
+                Email
+                <input type="email" id="email" placeholder="Enter your Email" required>
+            </label>
+            <br>
+            <label for="number" id="number-label">
+                Phone number
+                <input type="tel" id="number" placeholder="Enter your Phone number" required minlength="11" maxlength="14" pattern="^\+?\d{11,14}$">
+            </label>
+        </fieldset>
+
+        <fieldset class="form-wrap" id="xp-wrap">
+            <p>
+                Do you have any work experience for this role?
+            <p>
+                <select id="dropdown">
+                    <option disabled selected>
+                        Choose an answer
+                    </option>
+                    <option>
+                        Yes
+                    </option>
+                    <option>
+                        No
+                    </option>
+                    <option>
+                        Prefer not to comment
+                    </option>
+                </select>
+        </fieldset>
+
+        <fieldset class="form-wrap" id="xp-years">
+            <p>
+                How many companies have you worked for?
+            </p>
+            <label for="one">
+                <input type="radio" id="one" name="worked-for" value="1com">
+                1
+            </label>
+            <br>
+            <label for="two">
+                <input type="radio" id="two" name="worked-for" value="2com">
+                2
+            </label>
+            <br>
+            <label for="three">
+                <input type="radio" id="three" name="worked-for" value="3com">
+                3 or more
+            </label>
+        </fieldset>
+
+        <fieldset class="form-wrap">
+            <p>
+                How many years of work experience do you have?
+            </p>
+            <label for="lessxp">
+                <input type="checkbox" id="lessxp" name="workXp" class="input-checkbox" value="less-workXp">
+                Less than 1
+            </label>
+            <br>
+            <label for="1xp">
+                <input type="checkbox" id="1xp" class="input-checkbox" name="workXp" value="one-workXp">
+                1
+            </label>
+            <br>
+            <label for="2xp">
+                <input type="checkbox" id="2xp" class="input-checkbox" name="workXp" value="two-workXp">
+                2
+            </label>
+            <br>
+            <label for="3xp">
+                <input type="checkbox" id="3xp" class="input-checkbox" name="workXp" value="three-workXp">
+                3
+            </label>
+            <br>
+            <label for="4xp">
+                <input type="checkbox" id="4xp" class="input-checkbox" name="workXp" value="four-workXp">
+                4 or more
+            </label>
+        </fieldset>
+
+        <fieldset class="form-wrap">
+            <label for="comments">
+                <p>Any comments or suggestions?</p>
+                <br>
+                <textarea id="comments" class="input-comments" placeholder="Enter your comments here..."> </textarea>
+            </label>
+        </fieldset>
+
+        <fieldset class="form-wrap">
+            <button type="submit" id="submit" class="submit-btn">Submit</button>
+        </fieldset>
+
+    </form>
+
+</body>
+
+</html>
